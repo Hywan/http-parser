@@ -973,7 +973,7 @@ reexecute:
           case 'R': parser->method = HTTP_REPORT; /* or REBIND */ break;
           case 'S': parser->method = HTTP_SUBSCRIBE; /* or SEARCH */ break;
           case 'T': parser->method = HTTP_TRACE; break;
-          case 'U': parser->method = HTTP_UNLOCK; /* or UNSUBSCRIBE, UNBIND */ break;
+          case 'U': parser->method = HTTP_UNLOCK; /* or UNSUBSCRIBE, UNBIND, UNCHECKOUT */ break;
           default:
             SET_ERRNO(HPE_INVALID_METHOD);
             goto error;
@@ -1076,6 +1076,8 @@ reexecute:
               parser->method = HTTP_UNSUBSCRIBE;
             } else if(ch == 'B') {
               parser->method = HTTP_UNBIND;
+            } else if(ch == 'C') {
+              parser->method = HTTP_UNCHECKOUT;
             } else {
               SET_ERRNO(HPE_INVALID_METHOD);
               goto error;

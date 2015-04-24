@@ -3703,6 +3703,7 @@ main (void)
     "MKACTIVITY",
     "MKWORKSPACE",
     "MERGE",
+    "UNCHECKOUT",
     "M-SEARCH",
     "NOTIFY",
     "SUBSCRIBE",
