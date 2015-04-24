@@ -959,7 +959,7 @@ reexecute:
         switch (ch) {
           case 'A': parser->method = HTTP_ACL; break;
           case 'B': parser->method = HTTP_BIND; /* or BASELINE-CONTROL */ break;
-          case 'C': parser->method = HTTP_CONNECT; /* or COPY, CHECKOUT */ break;
+          case 'C': parser->method = HTTP_CONNECT; /* or COPY, CHECKIN, CHECKOUT */ break;
           case 'D': parser->method = HTTP_DELETE; break;
           case 'G': parser->method = HTTP_GET; break;
           case 'H': parser->method = HTTP_HEAD; break;
@@ -1007,7 +1007,7 @@ reexecute:
           }
         } else if (parser->method == HTTP_CONNECT) {
           if (parser->index == 1 && ch == 'H') {
-            parser->method = HTTP_CHECKOUT;
+            parser->method = HTTP_CHECKIN; /* or HTTP_CHECKOUT */
           } else if (parser->index == 2  && ch == 'P') {
             parser->method = HTTP_COPY;
           } else {
@@ -1077,6 +1077,8 @@ reexecute:
           }
         } else if (parser->index == 4 && parser->method == HTTP_PROPFIND && ch == 'P') {
           parser->method = HTTP_PROPPATCH;
+        } else if (parser->index == 5 && parser->method == HTTP_CHECKIN && ch == 'O') {
+          parser->method = HTTP_CHECKOUT;
         } else {
           SET_ERRNO(HPE_INVALID_METHOD);
           goto error;
