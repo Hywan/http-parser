@@ -958,7 +958,7 @@ reexecute:
         parser->index = 1;
         switch (ch) {
           case 'A': parser->method = HTTP_ACL; break;
-          case 'B': parser->method = HTTP_BIND; break;
+          case 'B': parser->method = HTTP_BIND; /* or BASELINE-CONTROL */ break;
           case 'C': parser->method = HTTP_CONNECT; /* or COPY, CHECKOUT */ break;
           case 'D': parser->method = HTTP_DELETE; break;
           case 'G': parser->method = HTTP_GET; break;
@@ -998,6 +998,13 @@ reexecute:
           UPDATE_STATE(s_req_spaces_before_url);
         } else if (ch == matcher[parser->index]) {
           ; /* nada */
+        } else if (parser->method == HTTP_BIND) {
+          if (parser->index == 1 && ch == 'A') {
+            parser->method = HTTP_BASELINECONTROL;
+          } else {
+            SET_ERRNO(HPE_INVALID_METHOD);
+            goto error;
+          }
         } else if (parser->method == HTTP_CONNECT) {
           if (parser->index == 1 && ch == 'H') {
             parser->method = HTTP_CHECKOUT;

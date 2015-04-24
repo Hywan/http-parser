@@ -3695,6 +3695,7 @@ main (void)
     "REBIND",
     "UNBIND",
     "ACL",
+    "BASELINE-CONTROL",
     "REPORT",
     "MKACTIVITY",
     "CHECKOUT",
