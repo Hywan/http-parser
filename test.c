@@ -3701,6 +3701,7 @@ main (void)
     "LABEL",
     "REPORT",
     "MKACTIVITY",
+    "MKWORKSPACE",
     "MERGE",
     "M-SEARCH",
     "NOTIFY",

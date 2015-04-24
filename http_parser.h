@@ -116,16 +116,17 @@ typedef int (*http_cb) (http_parser*);
   XX(24, REPORT,          REPORT)           \
   XX(25, MKACTIVITY,      MKACTIVITY)       \
   XX(26, MERGE,           MERGE)            \
+  XX(27, MKWORKSPACE,     MKWORKSPACE)      \
   /* upnp */                                \
-  XX(27, MSEARCH,         M-SEARCH)         \
-  XX(28, NOTIFY,          NOTIFY)           \
-  XX(29, SUBSCRIBE,       SUBSCRIBE)        \
-  XX(30, UNSUBSCRIBE,     UNSUBSCRIBE)      \
+  XX(28, MSEARCH,         M-SEARCH)         \
+  XX(29, NOTIFY,          NOTIFY)           \
+  XX(30, SUBSCRIBE,       SUBSCRIBE)        \
+  XX(31, UNSUBSCRIBE,     UNSUBSCRIBE)      \
   /* RFC-5789 */                            \
-  XX(31, PATCH,           PATCH)            \
-  XX(32, PURGE,           PURGE)            \
+  XX(32, PATCH,           PATCH)            \
+  XX(33, PURGE,           PURGE)            \
   /* CalDAV */                              \
-  XX(33, MKCALENDAR,      MKCALENDAR)       \
+  XX(34, MKCALENDAR,      MKCALENDAR)       \
 
 enum http_method
   {

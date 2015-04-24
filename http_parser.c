@@ -964,7 +964,7 @@ reexecute:
           case 'G': parser->method = HTTP_GET; break;
           case 'H': parser->method = HTTP_HEAD; break;
           case 'L': parser->method = HTTP_LOCK; /* or LABEL */ break;
-          case 'M': parser->method = HTTP_MKCOL; /* or MOVE, MKACTIVITY, MERGE, M-SEARCH, MKCALENDAR */ break;
+          case 'M': parser->method = HTTP_MKCOL; /* or MOVE, MKACTIVITY, MERGE, M-SEARCH, MKCALENDAR, MKWORKSPACE */ break;
           case 'N': parser->method = HTTP_NOTIFY; break;
           case 'O': parser->method = HTTP_OPTIONS; break;
           case 'P': parser->method = HTTP_POST;
@@ -1030,6 +1030,8 @@ reexecute:
             parser->method = HTTP_MSEARCH;
           } else if (parser->index == 2 && ch == 'A') {
             parser->method = HTTP_MKACTIVITY;
+          } else if (parser->index == 2 && ch == 'W') {
+            parser->method = HTTP_MKWORKSPACE;
           } else if (parser->index == 3 && ch == 'A') {
             parser->method = HTTP_MKCALENDAR;
           } else {
