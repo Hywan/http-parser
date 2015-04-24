@@ -112,19 +112,20 @@ typedef int (*http_cb) (http_parser*);
   XX(20, BASELINECONTROL, BASELINE-CONTROL) \
   XX(21, CHECKIN,         CHECKIN)          \
   XX(22, CHECKOUT,        CHECKOUT)         \
-  XX(23, REPORT,          REPORT)           \
-  XX(24, MKACTIVITY,      MKACTIVITY)       \
-  XX(25, MERGE,           MERGE)            \
+  XX(23, LABEL,           LABEL)            \
+  XX(24, REPORT,          REPORT)           \
+  XX(25, MKACTIVITY,      MKACTIVITY)       \
+  XX(26, MERGE,           MERGE)            \
   /* upnp */                                \
-  XX(26, MSEARCH,         M-SEARCH)         \
-  XX(27, NOTIFY,          NOTIFY)           \
-  XX(28, SUBSCRIBE,       SUBSCRIBE)        \
-  XX(29, UNSUBSCRIBE,     UNSUBSCRIBE)      \
+  XX(27, MSEARCH,         M-SEARCH)         \
+  XX(28, NOTIFY,          NOTIFY)           \
+  XX(29, SUBSCRIBE,       SUBSCRIBE)        \
+  XX(30, UNSUBSCRIBE,     UNSUBSCRIBE)      \
   /* RFC-5789 */                            \
-  XX(30, PATCH,           PATCH)            \
-  XX(31, PURGE,           PURGE)            \
+  XX(31, PATCH,           PATCH)            \
+  XX(32, PURGE,           PURGE)            \
   /* CalDAV */                              \
-  XX(32, MKCALENDAR,      MKCALENDAR)       \
+  XX(33, MKCALENDAR,      MKCALENDAR)       \
 
 enum http_method
   {

@@ -3698,6 +3698,7 @@ main (void)
     "BASELINE-CONTROL",
     "CHECKIN",
     "CHECKOUT",
+    "LABEL",
     "REPORT",
     "MKACTIVITY",
     "MERGE",
