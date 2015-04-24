@@ -3705,6 +3705,7 @@ main (void)
     "MERGE",
     "UNCHECKOUT",
     "UPDATE",
+    "VERSION-CONTROL",
     "M-SEARCH",
     "NOTIFY",
     "SUBSCRIBE",

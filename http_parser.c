@@ -974,6 +974,7 @@ reexecute:
           case 'S': parser->method = HTTP_SUBSCRIBE; /* or SEARCH */ break;
           case 'T': parser->method = HTTP_TRACE; break;
           case 'U': parser->method = HTTP_UNLOCK; /* or UNSUBSCRIBE, UNBIND, UNCHECKOUT, UPDATE */ break;
+          case 'V': parser->method = HTTP_VERSIONCONTROL; break;
           default:
             SET_ERRNO(HPE_INVALID_METHOD);
             goto error;
