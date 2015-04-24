@@ -963,7 +963,7 @@ reexecute:
           case 'D': parser->method = HTTP_DELETE; break;
           case 'G': parser->method = HTTP_GET; break;
           case 'H': parser->method = HTTP_HEAD; break;
-          case 'L': parser->method = HTTP_LOCK; /* or LABEL */ break;
+          case 'L': parser->method = HTTP_LOCK; /* or LABEL, LINK */ break;
           case 'M': parser->method = HTTP_MKCOL; /* or MOVE, MKACTIVITY, MERGE, M-SEARCH, MKCALENDAR, MKWORKSPACE */ break;
           case 'N': parser->method = HTTP_NOTIFY; break;
           case 'O': parser->method = HTTP_OPTIONS; break;
@@ -1018,6 +1018,8 @@ reexecute:
         } else if (parser->method == HTTP_LOCK) {
           if (parser->index == 1 && ch == 'A') {
             parser->method = HTTP_LABEL;
+          } else if (parser->index == 1 && ch == 'I') {
+            parser->method = HTTP_LINK;
           } else {
             SET_ERRNO(HPE_INVALID_METHOD);
             goto error;

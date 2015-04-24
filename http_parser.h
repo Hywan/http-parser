@@ -95,41 +95,42 @@ typedef int (*http_cb) (http_parser*);
   XX(5,  CONNECT,         CONNECT)          \
   XX(6,  OPTIONS,         OPTIONS)          \
   XX(7,  TRACE,           TRACE)            \
+  XX(8,  LINK,            LINK)             \
   /* WebDAV */                              \
-  XX(8,  COPY,            COPY)             \
-  XX(9,  LOCK,            LOCK)             \
-  XX(10, MKCOL,           MKCOL)            \
-  XX(11, MOVE,            MOVE)             \
-  XX(12, PROPFIND,        PROPFIND)         \
-  XX(13, PROPPATCH,       PROPPATCH)        \
-  XX(14, SEARCH,          SEARCH)           \
-  XX(15, UNLOCK,          UNLOCK)           \
-  XX(16, BIND,            BIND)             \
-  XX(17, REBIND,          REBIND)           \
-  XX(18, UNBIND,          UNBIND)           \
-  XX(19, ACL,             ACL)              \
+  XX(9,  COPY,            COPY)             \
+  XX(10, LOCK,            LOCK)             \
+  XX(11, MKCOL,           MKCOL)            \
+  XX(12, MOVE,            MOVE)             \
+  XX(13, PROPFIND,        PROPFIND)         \
+  XX(14, PROPPATCH,       PROPPATCH)        \
+  XX(15, SEARCH,          SEARCH)           \
+  XX(16, UNLOCK,          UNLOCK)           \
+  XX(17, BIND,            BIND)             \
+  XX(18, REBIND,          REBIND)           \
+  XX(19, UNBIND,          UNBIND)           \
+  XX(20, ACL,             ACL)              \
   /* subversion */                          \
-  XX(20, BASELINECONTROL, BASELINE-CONTROL) \
-  XX(21, CHECKIN,         CHECKIN)          \
-  XX(22, CHECKOUT,        CHECKOUT)         \
-  XX(23, LABEL,           LABEL)            \
-  XX(24, REPORT,          REPORT)           \
-  XX(25, MKACTIVITY,      MKACTIVITY)       \
-  XX(26, MERGE,           MERGE)            \
-  XX(27, MKWORKSPACE,     MKWORKSPACE)      \
-  XX(28, UNCHECKOUT,      UNCHECKOUT)       \
-  XX(29, UPDATE,          UPDATE)           \
-  XX(30, VERSIONCONTROL,  VERSION-CONTROL)  \
+  XX(21, BASELINECONTROL, BASELINE-CONTROL) \
+  XX(22, CHECKIN,         CHECKIN)          \
+  XX(23, CHECKOUT,        CHECKOUT)         \
+  XX(24, LABEL,           LABEL)            \
+  XX(25, REPORT,          REPORT)           \
+  XX(26, MKACTIVITY,      MKACTIVITY)       \
+  XX(27, MERGE,           MERGE)            \
+  XX(28, MKWORKSPACE,     MKWORKSPACE)      \
+  XX(29, UNCHECKOUT,      UNCHECKOUT)       \
+  XX(30, UPDATE,          UPDATE)           \
+  XX(31, VERSIONCONTROL,  VERSION-CONTROL)  \
   /* upnp */                                \
-  XX(31, MSEARCH,         M-SEARCH)         \
-  XX(32, NOTIFY,          NOTIFY)           \
-  XX(33, SUBSCRIBE,       SUBSCRIBE)        \
-  XX(34, UNSUBSCRIBE,     UNSUBSCRIBE)      \
+  XX(32, MSEARCH,         M-SEARCH)         \
+  XX(33, NOTIFY,          NOTIFY)           \
+  XX(34, SUBSCRIBE,       SUBSCRIBE)        \
+  XX(35, UNSUBSCRIBE,     UNSUBSCRIBE)      \
   /* RFC-5789 */                            \
-  XX(35, PATCH,           PATCH)            \
-  XX(36, PURGE,           PURGE)            \
+  XX(36, PATCH,           PATCH)            \
+  XX(37, PURGE,           PURGE)            \
   /* CalDAV */                              \
-  XX(37, MKCALENDAR,      MKCALENDAR)       \
+  XX(38, MKCALENDAR,      MKCALENDAR)       \
 
 enum http_method
   {
